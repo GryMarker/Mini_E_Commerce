@@ -2,17 +2,19 @@ import { useCart } from '../lib/CartContext';
 import { motion } from 'motion/react';
 import { Minus, Plus, Trash2, ShoppingBag } from 'lucide-react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { fadeUpItem, pageTransition, staggerContainer } from '../lib/animations';
 
 export default function Cart({ session }: { session: any }) {
   const { items, removeFromCart, updateQuantity } = useCart();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const navigate = useNavigate();
 
   const total = items.reduce((sum, item) => sum + item.price * item.amount, 0);
 
   const handleCheckout = async () => {
     if (!session) {
-      alert("Please sign in to checkout.");
+      navigate('/auth');
       return;
     }
     setIsCheckingOut(true);
@@ -124,7 +126,7 @@ export default function Cart({ session }: { session: any }) {
             {isCheckingOut ? 'Processing...' : 'Proceed to Checkout'}
           </motion.button>
           {!session && (
-            <p className="text-[10px] uppercase tracking-[0.2em] text-center text-[#8C887D] font-bold mt-4">You must be signed in to checkout.</p>
+            <p className="text-[10px] uppercase tracking-[0.2em] text-center text-[#8C887D] font-bold mt-4">Checkout will take you to sign in first.</p>
           )}
         </div>
       </div>
