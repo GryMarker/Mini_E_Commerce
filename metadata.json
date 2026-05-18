@@ -1,0 +1,6 @@
+{
+  "name": "My Mini-E Commerce",
+  "description": "Supabase-powered e-commerce mini-system with Stripe payment integration and invoice recording.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
