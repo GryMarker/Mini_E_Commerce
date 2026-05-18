@@ -2,6 +2,14 @@
 
 Supabase-powered e-commerce mini-system built for the technical exam. The app includes a marketplace-style product catalog, Supabase authentication, cart checkout with Stripe, webhook-based invoice recording, and invoice detail views.
 
+## Live Demo
+
+Production deployment:
+
+```text
+https://mini-e-commerce-fawn.vercel.app
+```
+
 ## Deliverables
 
 - **Source Code:** GitHub repository for the full React/Vite app and API routes.

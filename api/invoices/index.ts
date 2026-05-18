@@ -1,4 +1,4 @@
-import { getAuthenticatedUser, getSupabase } from '../_shared';
+import { getAuthenticatedUser, getSupabase } from '../_shared.js';
 
 export default async function handler(req: any, res: any) {
   if (req.method !== 'GET') {

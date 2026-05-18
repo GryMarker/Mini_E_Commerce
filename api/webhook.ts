@@ -1,4 +1,4 @@
-import { getStripe, getSupabase, readRawBody } from './_shared';
+import { getStripe, getSupabase, readRawBody } from './_shared.js';
 
 export const config = {
   api: {
